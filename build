@@ -1,0 +1,26 @@
+#!/bin/bash
+
+set -e
+
+#export PACKER_LOG=1
+#
+echo 'CLEANING EXISTING....'
+vagrant destroy -f
+rm -rf $HOME/VirtualBox\ VMs/centos6.6-nginx-pg_default_*
+rm -rf $HOME/.vagrant.d/boxes/centos6.6-nginx-pg*
+rm -rf output-virtualbox-iso
+rm -rf .vagrant
+rm box/centos6.6-nginx-pg.box || true
+
+echo 'RUNNING PACKER....'
+packer build -parallel=false -force -only=virtualbox-iso packer.json
+
+echo 'REMOVING BOX....'
+vagrant box remove centos6.6-nginx-pg || true
+
+echo 'ADDING NEW BOX....'
+vagrant box add centos6.6-nginx-pg box/centos6.6-nginx-pg.box
+
+echo 'VAGRANT UP...'
+vagrant up
+#vagrant ssh

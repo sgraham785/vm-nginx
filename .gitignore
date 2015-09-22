@@ -1,0 +1,21 @@
+# Ignore build dirs
+box/*.box
+packer_cache/
+output-virtualbox-iso/
+.vagrant/
+
+
+
+# Ignore public dirs
+public/cgi-bin
+public/conf/*
+public/error
+public/icons
+public/logs/*.*_log
+
+public/html/*
+
+# Add back a few things
+!box/.gitkeep
+!public/conf/default.conf
+!public/logs/.gitkeep
