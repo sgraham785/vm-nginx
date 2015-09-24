@@ -2,8 +2,11 @@
 
 echo 'RUNNING NODEJS INSTALL....'
 
+curl --silent --location https://rpm.nodesource.com/setup | bash -
+
 echo 'Install Nodejs & NPM'
-yum -y install nodejs npm
+yum -y install nodejs
+yum install gcc-c++ make
 
 echo 'Update NPM...'
 npm install -g npm

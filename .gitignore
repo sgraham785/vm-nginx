@@ -18,4 +18,6 @@ public/html/*
 # Add back a few things
 !box/.gitkeep
 !public/conf/default.conf
+!public/conf/vagrant.conf
+!public/html/index.html
 !public/logs/.gitkeep

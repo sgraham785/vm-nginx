@@ -33,7 +33,7 @@ This will install the entire base vm environment
 Add this to your LOCAL host file, usually found `/etc/hosts`
 
 ```
-192.168.19.10 default.vm
+192.168.19.10 vagrant.vm
 ```
 
 Directory map:
