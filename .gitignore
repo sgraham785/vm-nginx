@@ -7,10 +7,12 @@ output-virtualbox-iso/
 
 
 # Ignore public dirs
+public/apache
 public/cgi-bin
 public/conf/*
 public/error
 public/icons
+public/logs/*.log
 public/logs/*.*_log
 
 public/html/*
