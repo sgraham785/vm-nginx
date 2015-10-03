@@ -34,7 +34,7 @@ make && make install
 ln -s /usr/local/bin/node /usr/bin/node
 node -v
 
-ln -s /usr/local/lib/node_modules/npm/bin/npm-cli.js /usr/local/bin/npm
+ln -s /usr/local/lib/node_modules/npm/bin/npm-cli.js /usr/bin/npm
 
 echo 'Update NPM...'
 npm update -g npm
