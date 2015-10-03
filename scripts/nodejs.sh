@@ -48,4 +48,4 @@ npm install -g nodemon
 
 echo 'Output versions'
 node --version
-gulp -v
+#gulp -v
