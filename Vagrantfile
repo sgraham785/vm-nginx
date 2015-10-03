@@ -72,7 +72,7 @@ Vagrant.configure(2) do |config|
     config.vm.provision :shell, :path => "scripts/kss.sh", keep_color: true
 
     # A little house cleaning
-    #config.vm.provision :shell, :path => "scripts/cleanup.sh", keep_color: true
+    config.vm.provision :shell, :path => "scripts/cleanup.sh", keep_color: true
 
     # Run startup script on up & reload always
     config.vm.provision "shell", inline: "sh /vagrant/scripts/startup.sh", run: "always", keep_color: true
