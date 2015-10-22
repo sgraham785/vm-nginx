@@ -31,7 +31,8 @@ cd node-v4.1.1
 ./configure
 make && make install
 
-ln -s /usr/local/bin/node /usr/bin/node
+echo 'Add local/bin to PATH'
+export PATH=$PATH:/usr/local/bin
 node -v
 
 ln -s /usr/local/lib/node_modules/npm/bin/npm-cli.js /usr/bin/npm
@@ -41,11 +42,12 @@ npm update -g npm
 npm -v
 
 echo 'Install Gulp'
-npm install gulp -g
+npm install -g gulp
 
-echo 'Install Nodemon'
+echo 'Install Nodemon & Forever'
 npm install -g nodemon
+npm install -g forever
 
 echo 'Output versions'
 node --version
-#gulp -v
+gulp -v
