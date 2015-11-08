@@ -20,11 +20,11 @@ Vagrant.configure(2) do |config|
   # Define Vagrant box IP edit xx is multiple boxes at once (192.168.xx.10)
   config.vm.network :private_network, ip: "192.168.19.10"
 
-  #config.vm.synced_folder "public", "/var/www",
-  #    nfs: { mount_options: ["dmode=777", "fmode=777", "vers=4,nolock,udp"] }
+  ## NFS mount
+  config.vm.synced_folder "public", "/var/www", nfs: { mount_options: ["dmode=777", "fmode=777", "vers=4,nolock,udp"] }
 
   ## Non NFS
-  config.vm.synced_folder "public", "/var/www", :nfs => false, :mount_options => ["dmode=777","fmode=777"]
+#  config.vm.synced_folder "public", "/var/www", :nfs => false, :mount_options => ["dmode=777","fmode=777"]
 
   # Set MEM & CPU for virtualbox to use
       config.vm.provider "virtualbox" do |v|
